@@ -106,16 +106,3 @@ To change the model, set `GEMINI_MODEL` in `.env` (default: `gemini-3.1-flash-li
 light and reliable on the free tier). Model availability changes over time; if you get a
 `404 NOT_FOUND` or `503` error, pick another model from https://aistudio.google.com.
 
-### Run the tests
-
-```bash
-pytest
-```
-
-The tests use a fake LLM, so they run offline without an API key.
-
-## Notes
-
-- The free Gemini tier has per-minute and per-day request limits. Each message makes three model
-  calls (classifier, answer, insights), so heavy use may hit rate limits.
-- Never commit `.env` or any API key.
